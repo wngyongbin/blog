@@ -2,7 +2,7 @@
 <html lang="zh"
 >
 <head>
-    <title>My super title 2 - </title>
+    <title>起点 - </title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,22 +10,16 @@
 
 
 
-<link rel="canonical" href="http://wngyongbin.github.io/blog/my-super-post2.html">
 
-        <meta name="author" content="Alexis Metaireau" />
-        <meta name="keywords" content="pelican,publishing" />
-        <meta name="description" content="Short version for index and feeds" />
+    <meta name="author" content="王勇彬" />
+    <meta name="keywords" content="起点" />
 
+    <!-- Open Graph tags -->
         <meta property="og:site_name" content="" />
-        <meta property="og:type" content="article"/>
-        <meta property="og:title" content="My super title 2"/>
-        <meta property="og:url" content="http://wngyongbin.github.io/blog/my-super-post2.html"/>
-        <meta property="og:description" content="Short version for index and feeds"/>
-        <meta property="article:published_time" content="2010-12-03" />
-            <meta property="article:section" content="Python" />
-            <meta property="article:tag" content="pelican" />
-            <meta property="article:tag" content="publishing" />
-            <meta property="article:author" content="Alexis Metaireau" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content=""/>
+        <meta property="og:url" content="http://wngyongbin.github.io/blog"/>
+        <meta property="og:description" content=""/>
 
 
     <!-- Bootstrap -->
@@ -53,14 +47,8 @@
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                        <li >
-                            <a href="http://wngyongbin.github.io/blog/category/macos.html">Macos</a>
-                        </li>
-                        <li >
-                            <a href="http://wngyongbin.github.io/blog/category/misc.html">Misc</a>
-                        </li>
                         <li class="active">
-                            <a href="http://wngyongbin.github.io/blog/category/python.html">Python</a>
+                            <a href="http://wngyongbin.github.io/blog/category/qi-dian.html">起点</a>
                         </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -76,75 +64,26 @@
     <div class="row">
         <div class="col-sm-9">
 
-    <section id="content">
-        <article>
-            <header class="page-header">
-                <h1>
-                    <a href="http://wngyongbin.github.io/blog/my-super-post2.html"
-                       rel="bookmark"
-                       title="Permalink to My super title 2">
-                        My super title 2
-                    </a>
-                </h1>
-            </header>
-            <div class="entry-content">
-                <div class="panel">
-                    <div class="panel-body">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2010-12-03T10:20:00+08:00"> 五 03 十二月 2010</time>
-    </span>
-
-
-
-<span class="label label-default">Tags</span>
-	<a href="http://wngyongbin.github.io/blog/tag/pelican.html">pelican</a>
-        /
-	<a href="http://wngyongbin.github.io/blog/tag/publishing.html">publishing</a>
-    
-</footer><!-- /.post-info -->                    </div>
+            <article>
+                <h2><a href="http://wngyongbin.github.io/blog/wo-de-di-yi-pian-bo-wen.html">我的第一篇博文</a></h2>
+                <div class="summary"><h1>背景</h1>
+<p>来到创业公司快一年时间了，有些东西想写出来与大家做些分享讨论。</p>
+<h1>搭建博客</h1>
+<p>之前在github上也搭建过一个博客，用的是静态HTML模版，效果极差。这次看到使用pelican建立博客的<a href="http://www.lizherui.com/pages/2013/08/17/build_blog.html">教程</a>，照着操作体验了下，效果超赞。同学们也赶紧动手搭建自己的博客吧！</p>
+<p>这里做一点补充：
+markdown文章的开头需要加上以下内容，用于解析文章的时候会根据这些字段做分类归档。</p>
+<div class="highlight"><pre><span class="n">Title</span><span class="o">:</span> <span class="n">My</span> <span class="n">title</span><span class="o">(</span><span class="err">文章标题</span><span class="o">)</span>
+<span class="n">Date</span><span class="o">:</span> <span class="mi">2015</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">06</span> <span class="mi">12</span><span class="o">:</span><span class="mi">00</span><span class="o">(</span><span class="err">创建日期</span><span class="o">)</span>
+<span class="n">Modified</span><span class="o">:</span> <span class="mi">2015</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">06</span> <span class="mi">16</span><span class="o">:</span><span class="mi">00</span><span class="o">(</span><span class="err">修改日期</span><span class="o">)</span>
+<span class="n">Category</span><span class="o">:</span> <span class="n">iOS</span><span class="o">(</span><span class="err">文章分类，标志本文处于该分类下</span><span class="o">)</span>
+<span class="n">Tags</span><span class="o">:</span> <span class="n">iOS</span><span class="o">(</span><span class="err">文章标签，标志本文处于该标签下</span><span class="o">)</span>
+<span class="n">Slug</span><span class="o">:</span> <span class="n">URL</span><span class="err">中该文章的链接地址</span>
+<span class="n">Author</span><span class="o">:</span> <span class="err">王勇彬</span><span class="o">(</span><span class="err">作者</span><span class="o">)</span>
+</pre></div>
+                    <a class="btn btn-default btn-xs" href="http://wngyongbin.github.io/blog/wo-de-di-yi-pian-bo-wen.html">more ...</a>
                 </div>
-                <h1>MacDown</h1>
-<p><img alt="MacDown logo" src="http://macdown.uranusjr.com/static/base/img/logo-160.png" /></p>
-<p>Hello there! I’m <strong>MacDown</strong>, the open source Markdown editor for OS X.</p>
-<p>Let me introduce myself.</p>
-<h2>Markdown and I</h2>
-<p><strong>Markdown</strong> is a plain text formatting syntax created by John Gruber, aiming to provide a easy-to-read and feasible markup. The original Markdown syntax specification can be found <a href="http://daringfireball.net/projects/markdown/syntax">here</a>.</p>
-            </div>
-            <!-- /.entry-content -->
-    <hr/>
-    <section class="comments" id="comments">
-        <h2>Comments</h2>
-
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'iosdevelop'; // required: replace example with your forum shortname
-
-                    var disqus_identifier = 'my-super-post2';
-                var disqus_url = 'http://wngyongbin.github.io/blog/my-super-post2.html';
-
-            var disqus_config = function () {
-                this.language = "zh";
-            };
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function () {
-                var dsq = document.createElement('script');
-                dsq.type = 'text/javascript';
-                dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
-            Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-    </section>
-        </article>
-    </section>
+            </article>
+            <hr/>
 
         </div>
         <div class="col-sm-3" id="sidebar">
@@ -175,7 +114,7 @@
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2013 王勇彬
+         <div class="col-xs-10">&copy; 2015 王勇彬
             &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
