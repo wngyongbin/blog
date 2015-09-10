@@ -47,6 +47,9 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                         <li >
+                            <a href="http://wngyongbin.github.io/blog/category/ios.html">Ios</a>
+                        </li>
+                        <li >
                             <a href="http://wngyongbin.github.io/blog/category/markdown.html">Markdown</a>
                         </li>
                         <li >
@@ -66,6 +69,35 @@
     <div class="row">
         <div class="col-sm-9">
 
+            <article>
+                <h2><a href="http://wngyongbin.github.io/blog/tan-iosxiang-mu-wen-jian-jia-zu-zhi-jie-gou.html">谈iOS项目文件夹组织结构</a></h2>
+                <div class="summary"><p>Summary: MacDown.</p>
+<p>本文主要浅谈下作者最近一个项目的文件组织结构变化。</p>
+<h2>Version 1</h2>
+<p>项目一开始，第一个版本的文件组织结构如下：  </p>
+<div class="highlight"><pre>ProjectName
+    |- AppDelegate（存放AppDelegate）
+    |- ViewControllers（存放所有的Controllers）
+    |- ViewModels（App采用MVVM设计，ViewModel文件就放这里）
+    |- Models（存放Model文件）
+    |- Views （存放公共的自定义View）
+    |- Managers（存放管理类，如通讯录上传管理，设备管理，定位管理，应用管理等）
+    |- Utility（存放基础帮助类，如字符串转换，价格转换，图像裁剪等）
+    |- Defines（存放宏定义及字符串定义文件）
+    |- Resources（存放非图片资源文件，图像文件强烈建议使用Image Assets）
+    |- Vendors（存放不是用Pod安装的第三方库）
+    |- Categories（存放扩展类）
+</pre></div>
+
+
+<p>该组织结构对于较小的项目没有太大问题，文件夹分类也交清楚；但是随着项目增大，会出现这些问题：  </p>
+<ul>
+<li>ViewControllers、ViewModels 、Models等这些目录会越来越庞大，找到对应的文件就要浪费很多时间；  </li>
+<li>开发一个功能时会同时涉及到ViewController、ViewModel ...</li></ul>
+                    <a class="btn btn-default btn-xs" href="http://wngyongbin.github.io/blog/tan-iosxiang-mu-wen-jian-jia-zu-zhi-jie-gou.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
             <article>
                 <h2><a href="http://wngyongbin.github.io/blog/wo-de-di-yi-pian-bo-wen.html">我的第一篇博文</a></h2>
                 <div class="summary"><p>Summary: 来到创业公司快一年时间了，有些东西想写出来与大家做些分享讨论.</p>
