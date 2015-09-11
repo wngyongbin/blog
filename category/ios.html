@@ -71,6 +71,57 @@
         <div class="col-sm-9">
 
             <article>
+                <h2><a href="http://wngyongbin.github.io/blog/tan-suo-ios8shang-reachabilityjian-ce-wang-luo-guan-bi-shi-de-yan-chi-wen-ti.html">探索iOS8上Reachability检测网络关闭时的延迟问题</a></h2>
+                <div class="summary"><p>本文主要探索下iOS8上Reachability检测网络关闭时的延迟问题，作者最后并没有解决该问题。</p>
+<h2>作者使用的Reachability版本</h2>
+<p>通过Pod安装的Reachability库可在Podfile.lock文件内查看版本号，作者使用的版本如下:  </p>
+<div class="highlight"><pre>- Reachability (3.2)
+</pre></div>
+
+
+<h2>Reachability在iOS7和iOS8上的延迟测试结果</h2>
+<p>首先呈上作者配置使用域名Reachability的代码:  </p>
+<div class="highlight"><pre>    <span class="n">Reachability</span><span class="o">*</span> <span class="n">reach</span> <span class="o">=</span> <span class="p">[</span><span class="n">Reachability</span> <span class="nl">reachabilityWithHostname</span><span class="p">:</span><span class="s">@&quot;xxx.xxx.com&quot;</span><span class="p">];</span>
+    <span class="n">reach</span><span class="p">.</span><span class="n">reachableOnWWAN</span> <span class="o">=</span> <span class="nb">YES</span><span class="p">;</span>
+
+    <span class="p">[[</span><span class="bp">NSNotificationCenter</span> <span class="n">defaultCenter</span><span class="p">]</span> <span class="nl">addObserver</span><span class="p">:</span><span class="nb">self</span>
+                                             <span class="nl">selector</span><span class="p">:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">reachabilityChanged</span><span class="p">:)</span>
+                                                 <span class="nl">name</span><span class="p">:</span><span class="n">kReachabilityChangedNotification</span>
+                                               <span class="nl">object</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
+    <span class="p">[</span><span class="n">reach</span> <span class="n">startNotifier</span><span class="p">];</span>  
+</pre></div>
+
+
+<p>reachabilityChanged:回调延迟的测试结果如下：  </p>
+<table>
+<thead>
+<tr>
+<th align="center">场景\系统版本</th>
+<th align="center">iOS7</th>
+<th align="center">iOS8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">打开网络</td>
+<td align="center">回调基本无延迟</td>
+<td align="center">回调基本无延迟</td>
+</tr>
+<tr>
+<td align="center">关闭网络</td>
+<td align="center">回调基本无延迟</td>
+<td align="center">回调有几秒的延迟</td>
+</tr>
+</tbody>
+</table>
+<h2>开始寻找答案</h2>
+<ul>
+<li>进入Reachability头文件，查看有无注释？<strong>结果 ...</strong></li></ul>
+                    <a class="btn btn-default btn-xs" href="http://wngyongbin.github.io/blog/tan-suo-ios8shang-reachabilityjian-ce-wang-luo-guan-bi-shi-de-yan-chi-wen-ti.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="http://wngyongbin.github.io/blog/tan-iosxiang-mu-wen-jian-jia-zu-zhi-jie-gou.html">谈iOS项目文件夹组织结构</a></h2>
                 <div class="summary"><p>Summary: MacDown.</p>
 <p>本文主要浅谈下作者最近一个项目的文件组织结构变化。</p>
@@ -91,7 +142,7 @@
 </pre></div>
 
 
-<p>该组织结构对于较小的项目没有太大问题，文件夹分类也交清楚；但是随着项目增大，会出现这些问题：  </p>
+<p>该组织结构对于较小的项目没有太大问题，文件夹分类也较清楚；但是随着项目增大，会出现这些问题：  </p>
 <ul>
 <li>ViewControllers、ViewModels 、Models等这些目录会越来越庞大，找到对应的文件就要浪费很多时间；  </li>
 <li>开发一个功能时会同时涉及到ViewController、ViewModel ...</li></ul>

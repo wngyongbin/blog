@@ -2,7 +2,7 @@
 <html lang="zh"
 >
 <head>
-    <title></title>
+    <title>探索iOS8上Reachability检测网络关闭时的延迟问题 - </title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,15 +10,21 @@
 
 
 
-<link rel="canonical" href="http://wngyongbin.github.io/blog">
-        <meta name="author" content="王勇彬" />
+<link rel="canonical" href="http://wngyongbin.github.io/blog/tan-suo-ios8shang-reachabilityjian-ce-wang-luo-guan-bi-shi-de-yan-chi-wen-ti.html">
 
-    <!-- Open Graph tags -->
+        <meta name="author" content="王勇彬" />
+        <meta name="keywords" content="iOS" />
+        <meta name="description" content="本文主要探索下iOS8上Reachability检测网络关闭时的延迟问题，作者最后并没有解决该问题。 作者使用的Reachability版本 通过Pod安装的Reachability库可在Podfile.lock文件内查看版本号，作者使用的版本如下: - Reachability (3.2) Reachability在iOS7和iOS8上的延迟测试结果 首先呈上作者配置使用域名Reachability的代码: Reachability* reach = [Reachability reachabilityWithHostname:@&#34;xxx.xxx.com&#34;]; reach.reachableOnWWAN = YES; [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil]; [reach startNotifier]; reachabilityChanged:回调延迟的测试结果如下： 场景\系统版本 iOS7 iOS8 打开网络 回调基本无延迟 回调基本无延迟 关闭网络 回调基本无延迟 回调有几秒的延迟 开始寻找答案 进入Reachability头文件，查看有无注释？结果 ..." />
+
         <meta property="og:site_name" content="" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content=""/>
-        <meta property="og:url" content="http://wngyongbin.github.io/blog"/>
-        <meta property="og:description" content=""/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="探索iOS8上Reachability检测网络关闭时的延迟问题"/>
+        <meta property="og:url" content="http://wngyongbin.github.io/blog/tan-suo-ios8shang-reachabilityjian-ce-wang-luo-guan-bi-shi-de-yan-chi-wen-ti.html"/>
+        <meta property="og:description" content="本文主要探索下iOS8上Reachability检测网络关闭时的延迟问题，作者最后并没有解决该问题。 作者使用的Reachability版本 通过Pod安装的Reachability库可在Podfile.lock文件内查看版本号，作者使用的版本如下: - Reachability (3.2) Reachability在iOS7和iOS8上的延迟测试结果 首先呈上作者配置使用域名Reachability的代码: Reachability* reach = [Reachability reachabilityWithHostname:@&#34;xxx.xxx.com&#34;]; reach.reachableOnWWAN = YES; [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil]; [reach startNotifier]; reachabilityChanged:回调延迟的测试结果如下： 场景\系统版本 iOS7 iOS8 打开网络 回调基本无延迟 回调基本无延迟 关闭网络 回调基本无延迟 回调有几秒的延迟 开始寻找答案 进入Reachability头文件，查看有无注释？结果 ..."/>
+        <meta property="article:published_time" content="2015-09-11" />
+            <meta property="article:section" content="iOS" />
+            <meta property="article:tag" content="iOS" />
+            <meta property="article:author" content="王勇彬" />
 
 
     <!-- Bootstrap -->
@@ -46,7 +52,7 @@
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                        <li >
+                        <li class="active">
                             <a href="http://wngyongbin.github.io/blog/category/ios.html">Ios</a>
                         </li>
                         <li >
@@ -69,9 +75,34 @@
     <div class="row">
         <div class="col-sm-9">
 
-            <article>
-                <h2><a href="http://wngyongbin.github.io/blog/tan-suo-ios8shang-reachabilityjian-ce-wang-luo-guan-bi-shi-de-yan-chi-wen-ti.html">探索iOS8上Reachability检测网络关闭时的延迟问题</a></h2>
-                <div class="summary"><p>本文主要探索下iOS8上Reachability检测网络关闭时的延迟问题，作者最后并没有解决该问题。</p>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://wngyongbin.github.io/blog/tan-suo-ios8shang-reachabilityjian-ce-wang-luo-guan-bi-shi-de-yan-chi-wen-ti.html"
+                       rel="bookmark"
+                       title="Permalink to 探索iOS8上Reachability检测网络关闭时的延迟问题">
+                        探索iOS8上Reachability检测网络关闭时的延迟问题
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2015-09-11T13:00:00+08:00"> 五 11 九月 2015</time>
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://wngyongbin.github.io/blog/tag/ios.html">iOS</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>本文主要探索下iOS8上Reachability检测网络关闭时的延迟问题，作者最后并没有解决该问题。</p>
 <h2>作者使用的Reachability版本</h2>
 <p>通过Pod安装的Reachability库可在Podfile.lock文件内查看版本号，作者使用的版本如下:  </p>
 <div class="highlight"><pre>- Reachability (3.2)
@@ -115,74 +146,62 @@
 </table>
 <h2>开始寻找答案</h2>
 <ul>
-<li>进入Reachability头文件，查看有无注释？<strong>结果 ...</strong></li></ul>
-                    <a class="btn btn-default btn-xs" href="http://wngyongbin.github.io/blog/tan-suo-ios8shang-reachabilityjian-ce-wang-luo-guan-bi-shi-de-yan-chi-wen-ti.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://wngyongbin.github.io/blog/tan-iosxiang-mu-wen-jian-jia-zu-zhi-jie-gou.html">谈iOS项目文件夹组织结构</a></h2>
-                <div class="summary"><p>Summary: MacDown.</p>
-<p>本文主要浅谈下作者最近一个项目的文件组织结构变化。</p>
-<h2>Version 1</h2>
-<p>项目一开始，第一个版本的文件组织结构如下：  </p>
-<div class="highlight"><pre>ProjectName
-    |- AppDelegate（存放AppDelegate）
-    |- ViewControllers（存放所有的Controllers）
-    |- ViewModels（App采用MVVM设计，ViewModel文件就放这里）
-    |- Models（存放Model文件）
-    |- Views （存放公共的自定义View）
-    |- Managers（存放管理类，如通讯录上传管理，设备管理，定位管理，应用管理等）
-    |- Utility（存放基础帮助类，如字符串转换，价格转换，图像裁剪等）
-    |- Defines（存放宏定义及字符串定义文件）
-    |- Resources（存放非图片资源文件，图像文件强烈建议使用Image Assets）
-    |- Vendors（存放不是用Pod安装的第三方库）
-    |- Categories（存放扩展类）
+<li>进入Reachability头文件，查看有无注释？<strong>结果：没有发现</strong>  </li>
+<li>前往Reachability的github页面，看看README.md文件和wiki上有无线索？<strong>结果：没有发现</strong>  </li>
+<li>Google搜索'reachability delay'！也没有发现，不过在Apple的网站上找到了这个说明:  </li>
+</ul>
+<div class="highlight"><pre>  IMPORTANT: Reachability must use DNS to resolve the host name before 
+  it can determine the Reachability of that host, and this may take time 
+  on certain network connections. Because of this, the API will return 
+  NotReachable until name resolution has completed. This delay may be 
+  visible in the interface on some networks.  
 </pre></div>
 
 
-<p>该组织结构对于较小的项目没有太大问题，文件夹分类也较清楚；但是随着项目增大，会出现这些问题：  </p>
+<p>答案似乎找到了~~</p>
+<h2>尝试验证Apple的解释</h2>
+<p>看看能不能通过抓包来做个验证，看看手机在断网之前会不会发出一些数据包。
+详细的<a href="https://developer.apple.com/library/ios/qa/qa1176/_index.html">抓包教程见这里</a>，作者抱着侥幸的心理用rvictl抓了下包，关闭网络，可惜也没有发现数据包可以解释Apple对Reachability延时的解释  </p>
+<h2>总结</h2>
 <ul>
-<li>ViewControllers、ViewModels 、Models等这些目录会越来越庞大，找到对应的文件就要浪费很多时间；  </li>
-<li>开发一个功能时会同时涉及到ViewController、ViewModel ...</li></ul>
-                    <a class="btn btn-default btn-xs" href="http://wngyongbin.github.io/blog/tan-iosxiang-mu-wen-jian-jia-zu-zhi-jie-gou.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://wngyongbin.github.io/blog/wo-de-di-yi-pian-bo-wen.html">我的第一篇博文</a></h2>
-                <div class="summary"><p>Summary: 来到创业公司快一年时间了，有些东西想写出来与大家做些分享讨论.</p>
-<h2>关于背景</h2>
-<p>来到创业公司快一年时间了，有些东西想写出来与大家做些分享讨论。</p>
-<h2>关于搭建博客</h2>
-<p>之前在github上也搭建过一个博客，用的是静态HTML模版，效果极差。这次看到使用pelican建立博客的<a href="http://www.lizherui.com/pages/2013/08/17/build_blog.html">教程</a>，照着操作体验了下，效果超赞。同学们也赶紧动手搭建自己的博客吧！</p>
-<p>这里做一点补充：
-markdown文章的开头需要加上以下内容，用于解析文章的时候会根据这些字段做分类归档。</p>
-<div class="highlight"><pre><span class="n">Title</span><span class="o">:</span> <span class="n">My</span> <span class="n">title</span><span class="o">(</span><span class="err">文章标题</span><span class="o">)</span>
-<span class="n">Date</span><span class="o">:</span> <span class="mi">2015</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">06</span> <span class="mi">12</span><span class="o">:</span><span class="mi">00</span><span class="o">(</span><span class="err">创建日期</span><span class="o">)</span>
-<span class="n">Modified</span><span class="o">:</span> <span class="mi">2015</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">06</span> <span class="mi">16</span><span class="o">:</span><span class="mi">00</span><span class="o">(</span><span class="err">修改日期</span><span class="o">)</span>
-<span class="n">Category</span><span class="o">:</span> <span class="n">iOS</span><span class="o">(</span><span class="err">文章分类，标志本文处于该分类下</span><span class="o">)</span>
-<span class="n">Tags</span><span class="o">:</span> <span class="n">iOS</span><span class="o">(</span><span class="err">文章标签，标志本文处于该标签下</span><span class="o">)</span>
-<span class="n">Slug</span><span class="o">:</span> <span class="n">URL</span><span class="err">中该文章的链接地址</span>
-<span class="n">Author</span><span class="o">:</span> <span class="err">王勇彬</span><span class="o">(</span><span class="err">作者</span><span class="o">)</span>
-</pre></div>
-                    <a class="btn btn-default btn-xs" href="http://wngyongbin.github.io/blog/wo-de-di-yi-pian-bo-wen.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://wngyongbin.github.io/blog/macdown.html">MacDown</a></h2>
-                <div class="summary"><p>Summary: MacDown.</p>
-<h1>MacDown</h1>
-<p><img alt="MacDown logo" src="http://macdown.uranusjr.com/static/base/img/logo-160.png" /></p>
-<p>Hello there! I’m <strong>MacDown</strong>, the open source Markdown editor for OS X.</p>
-<p>Let me introduce myself.</p>
-<h2>Markdown and I</h2>
-<p><strong>Markdown</strong> is a plain text formatting syntax created by John Gruber, aiming to provide a easy-to-read and feasible markup. The original Markdown syntax specification can be found ...</p>
-                    <a class="btn btn-default btn-xs" href="http://wngyongbin.github.io/blog/macdown.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
+<li>不要过度信任Reachability;</li>
+<li><strong>无论有没有网络，先把请求发出去，返回失败的时候再去检测是否有无网络</strong></li>
+</ul>
+<p>希望此篇文章对你有用；感谢阅读！</p>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'iosdevelop'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'tan-suo-ios8shang-reachabilityjian-ce-wang-luo-guan-bi-shi-de-yan-chi-wen-ti';
+                var disqus_url = 'http://wngyongbin.github.io/blog/tan-suo-ios8shang-reachabilityjian-ce-wang-luo-guan-bi-shi-de-yan-chi-wen-ti.html';
+
+            var disqus_config = function () {
+                this.language = "zh";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
 
         </div>
         <div class="col-sm-3" id="sidebar">
